@@ -25,7 +25,7 @@ class WeatherController extends Controller
             // Hacer la petición a la API
             $response = Http::get('http://api.openweathermap.org/data/2.5/weather', [
                 'q' => $city,
-                'appid' => 'd8b3f49cbd4ac8df467bab3a57e1541b',
+                'appid' => env('OPEN_WEATHER_MAP_API_KEY'),
                 'units' => 'imperial',
             ]);
             
